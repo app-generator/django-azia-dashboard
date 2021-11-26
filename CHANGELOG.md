@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.0.1] 2021-09-07
+## [1.0.1] 2021-11-26
 ### Improvements & Fixes
 
 - Bump Django Codebase to [v2.0.4](https://github.com/app-generator/boilerplate-code-django-dashboard/releases)
