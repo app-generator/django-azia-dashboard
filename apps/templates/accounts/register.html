@@ -1,0 +1,85 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} Register {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="az-signup-wrapper">
+      <div class="az-column-signup-left">
+        <div>
+          <i class="typcn typcn-chart-bar-outline"></i>
+          <h1 class="az-logo">az<span>i</span>a</h1>
+          <h5>Django Dashboard</h5>
+          <p>We are excited to launch our new company and product Azia. 
+             After being featured in too many magazines to mention and having created an online stir, 
+             we know that BootstrapDash is going to be big. We also hope to win Startup Fictional Business of the Year this year.</p>
+
+          <p>
+            &copy; <a target="_blank" href="https://bit.ly/2UTgih5">BootstrapDash.com</a> 
+            - coded by <a target="_blank" href="https://appseed.us">AppSeed</a>            
+          </p>
+
+          <a target="_blank" href="https://appseed.us" class="btn btn-outline-indigo">More Starters</a>
+        </div>
+      </div><!-- az-column-signup-left -->
+      <div class="az-column-signup">
+        <h1 class="az-logo">az<span>i</span>a</h1>
+
+        <div class="az-signup-header">
+          <h2>Register</h2>
+          
+          <h4>
+              <span class="mb-0 text-muted">
+                  {% if msg %}
+                      {{ msg | safe }}
+                  {% else %}
+                      Add your credentials
+                  {% endif %} 
+              </span>          
+          </h4>
+
+          <form role="form" method="post" action="">
+
+            {% csrf_token %}
+
+            <div class="form-group">
+              <label>Username</label>
+              {{ form.username }}
+            </div><!-- form-group -->
+            <span class="text-error">{{ form.username.errors }}</span>
+            
+            <div class="form-group">
+              <label>Email</label>
+                {{ form.email }}
+            </div><!-- form-group -->
+            <span class="text-error">{{ form.email.errors }}</span>
+
+            <div class="form-group">
+              <label>Password</label>
+              {{ form.password1 }}
+            </div><!-- form-group -->
+            <span class="text-error">{{ form.password1.errors }}</span>
+
+            <div class="form-group">
+              <label>Password</label>
+              {{ form.password2 }}
+            </div><!-- form-group -->            
+            <span class="text-error">{{ form.password2.errors }}</span>
+
+            <button type="submit" name="register" class="btn btn-az-primary btn-block">Create Account</button>
+
+          </form>
+        </div><!-- az-signup-header -->
+        <div class="az-signup-footer">
+          <p>Already have an account? <a href="{% url 'login' %}">Sign In</a></p>
+        </div><!-- az-signin-footer -->
+      </div><!-- az-column-signup -->
+    </div><!-- az-signup-wrapper -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
