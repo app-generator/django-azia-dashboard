@@ -1,15 +1,15 @@
 {
-    "name": "django-dashboard-azia",
+    "name": "django-azia",
     "mastertemplate": "boilerplate-code-django-dashboard",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Template project - Django Boilerplate Code",
     "scripts": {},
     "repository": {
         "type": "git",
-        "url": "https://github.com/app-generator/django-dashboard-azia"
+        "url": "https://github.com/app-generator/django-azia"
     },
     "bugs": {
-        "url": "https://github.com/app-generator/django-dashboard-azia/issues",
+        "url": "https://github.com/app-generator/django-azia/issues",
         "email": "support@appseed.us"
     },
     "author": "AppSeed App Generator <support@appseed.us> (https://appseed.us)",

@@ -6,11 +6,10 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django)** g
 
 > Features
 
-- `Up-to-date dependencies`: **Django 3.2.6 LTS**
+- `Up-to-date dependencies`
 - [SCSS compilation](#recompile-css) via **Gulp**
-- UI-Ready app, SQLite Database, Django Native ORM
-- Modular design, clean code-base
-- Session-Based Authentication, Forms validation
+- Modular design, clean codebase
+- `Session-Based Authentication`, Forms validation
 - `Deployment`: **Docker**, Gunicorn / Nginx
 - Support via **Github** and [Discord](https://discord.gg/fZC6hup).
 
@@ -29,8 +28,8 @@ Open-source **[Django Dashboard](https://appseed.us/admin-dashboards/django)** g
 > Get the code
 
 ```bash
-$ git clone https://github.com/app-generator/django-azia-dashboard.git
-$ cd django-azia-dashboard
+$ git clone https://github.com/app-generator/django-azia.git
+$ cd django-azia
 ```
 
 > Start the app in Docker
@@ -51,8 +50,8 @@ Visit `http://localhost:85` in your browser. The app should be up & running.
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/django-azia-dashboard.git
-$ cd django-azia-dashboard
+$ git clone https://github.com/app-generator/django-azia.git
+$ cd django-azia
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
