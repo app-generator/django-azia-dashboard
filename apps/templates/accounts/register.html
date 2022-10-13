@@ -41,37 +41,46 @@
               </span>          
           </h4>
 
-          <form role="form" method="post" action="">
+          {% if success %}
 
-            {% csrf_token %}
+            <a href="{% url 'login' %}" class="btn btn-az-primary btn-block">Sign IN</a>
 
-            <div class="form-group">
-              <label>Username</label>
-              {{ form.username }}
-            </div><!-- form-group -->
-            <span class="text-error">{{ form.username.errors }}</span>
-            
-            <div class="form-group">
-              <label>Email</label>
-                {{ form.email }}
-            </div><!-- form-group -->
-            <span class="text-error">{{ form.email.errors }}</span>
+          {% else %}
 
-            <div class="form-group">
-              <label>Password</label>
-              {{ form.password1 }}
-            </div><!-- form-group -->
-            <span class="text-error">{{ form.password1.errors }}</span>
+            <form role="form" method="post" action="">
 
-            <div class="form-group">
-              <label>Password</label>
-              {{ form.password2 }}
-            </div><!-- form-group -->            
-            <span class="text-error">{{ form.password2.errors }}</span>
+              {% csrf_token %}
 
-            <button type="submit" name="register" class="btn btn-az-primary btn-block">Create Account</button>
+              <div class="form-group">
+                <label>Username</label>
+                {{ form.username }}
+              </div><!-- form-group -->
+              <span class="text-error">{{ form.username.errors }}</span>
+              
+              <div class="form-group">
+                <label>Email</label>
+                  {{ form.email }}
+              </div><!-- form-group -->
+              <span class="text-error">{{ form.email.errors }}</span>
 
-          </form>
+              <div class="form-group">
+                <label>Password</label>
+                {{ form.password1 }}
+              </div><!-- form-group -->
+              <span class="text-error">{{ form.password1.errors }}</span>
+
+              <div class="form-group">
+                <label>Password</label>
+                {{ form.password2 }}
+              </div><!-- form-group -->            
+              <span class="text-error">{{ form.password2.errors }}</span>
+
+              <button type="submit" name="register" class="btn btn-az-primary btn-block">Create Account</button>
+
+            </form>
+        
+          {% endif %}
+
         </div><!-- az-signup-header -->
         <div class="az-signup-footer">
           <p>Already have an account? <a href="{% url 'login' %}">Sign In</a></p>
