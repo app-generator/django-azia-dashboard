@@ -1,6 +1,6 @@
 # Change Log
 
-## [1.0.3] 20212-06-10
+## [1.0.3] 2022-06-10
 ### Improvements
 
 - Built with [Azia Dashboard Generator](https://appseed.us/generator/azia-dashboard/)
